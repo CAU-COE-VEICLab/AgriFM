@@ -25,7 +25,7 @@
 
 **Notes**:
 - The details of Agri420K please see our paper and [excel](agri420k.xlsx).
-- Please see [excel](downstream tasks.xlsx) for the details of 10 downstream tasks.
+- Please see excel(downstream tasks.xlsx) for the details of 10 downstream tasks.
 - Due to the investment of funds for the work, we will make the training data publicly available after the article has been accepted.
 
 
