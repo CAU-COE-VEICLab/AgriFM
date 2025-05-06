@@ -85,7 +85,7 @@ load data:
  
   ```
 
-## 🏠 Support models
+## 🏠 Supported models
 * [x] swin transformer v1&v2
 * [x] vision transformer
 * [x] pvt 
