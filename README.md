@@ -18,13 +18,14 @@
 
 ## 🏠 TODOs
 * [x] Agri420K dataset (val).    [Download Link](https://drive.google.com/drive/folders/1-EuB92O74W9MO_590YGsfAwipZbS6kQ7?usp=sharing).
-* [ ] 10 Agriculture Downstream Task Datasets.
+* [ ] 10 Agriculture Downstream Task Datasets. 
 * [ ] pretrained weights in Agri420K
 * [ ] pretrained weights in ten downstream tasks
 * [ ] Agri420K dataset (train)
 
 **Notes**:
 - The details of Agri420K please see our paper and [excel](agri420k.xlsx).
+- Please see [excel](downstream tasks.xlsx) for the details of 10 downstream tasks.
 - Due to the investment of funds for the work, we will make the training data publicly available after the article has been accepted.
 
 
