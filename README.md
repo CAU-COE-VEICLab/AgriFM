@@ -2,7 +2,7 @@
 This project is a benchmark for computer vision in agriculture.
 
 ## 🏠 TODOs
-* Agri420K dataset (val).Download:https://drive.google.com/drive/folders/1-EuB92O74W9MO_590YGsfAwipZbS6kQ7?usp=sharing.
+* Agri420K dataset (val).    Download:https://drive.google.com/drive/folders/1-EuB92O74W9MO_590YGsfAwipZbS6kQ7?usp=sharing.
 * 10 Agriculture Downstream Task Datasets.
 
 **Notes**:
@@ -48,7 +48,7 @@ load data:
 - For standard folder dataset, move validation images to labeled sub-folders. The file structure should look like:
   ```bash
   $ tree data
-  imagenet
+  ImageNet1K and Agri420K
   ├── train
   │   ├── class1
   │   │   ├── img1.jpeg
