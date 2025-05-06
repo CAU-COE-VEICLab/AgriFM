@@ -1,0 +1,14 @@
+DATA:
+  DATASET: agri420k
+  IMG_SIZE: 224
+MODEL:
+  TYPE: mobilenetv2
+  NAME: mobilenetv2_ft
+TRAIN:
+  EPOCHS: 10
+  WARMUP_EPOCHS: 5
+  WEIGHT_DECAY: 1e-8
+  BASE_LR: 2e-05
+  WARMUP_LR: 2e-08
+  MIN_LR: 2e-07
+SAVE_FREQ: 15

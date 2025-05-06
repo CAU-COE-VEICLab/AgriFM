@@ -1,0 +1,27 @@
+DATA:
+  DATASET: agri420k
+  IMG_SIZE: 224
+MODEL:
+  TYPE: pvt
+  NAME: pvtv2_b1
+  PVT:
+    PATCH_SIZE: 4
+    EMBED_DIMS: [64, 128, 320, 512]
+    NUM_HEADS: [1, 2, 5, 8]
+    MLP_RATIOS: [8, 8, 4, 4]
+    QKV_BIAS: True
+    DEPTHS: [2, 2, 2, 2]
+    SR_RATIOS: [8, 4, 2, 1]
+    # DROP_RATE: 0.
+    # ATTN_DROP_RATE: 0.
+    # DROP_PATH_RATE: 0.
+    # PYT.NUM_STAGES: 4
+    # LINEAR: False
+TRAIN:
+  EPOCHS: 30
+  WARMUP_EPOCHS: 5
+  WEIGHT_DECAY: 1e-8
+  BASE_LR: 2e-05
+  WARMUP_LR: 2e-08
+  MIN_LR: 2e-07
+SAVE_FREQ: 15
