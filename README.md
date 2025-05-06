@@ -1,9 +1,23 @@
-# Agriculture-Benchmark
-This project is a benchmark for computer vision in agriculture.
+<div align="center">
+
+<h1>Agri420K: A Large-Scale Benchmark Dataset for Agricultural Image Recognition</h1> 
+
+<div>
+    <a>Guorun Li</a>;
+    <a>Yucong Wang</a>;
+    <a>Yuefeng Du*</a>;
+</div>
+
+<h3><strong>submitted to International Journal of Computer Vision in 2025</strong></h3>
+
+</div>
 
 ## 🏠 TODOs
-* Agri420K dataset (val).    Download:https://drive.google.com/drive/folders/1-EuB92O74W9MO_590YGsfAwipZbS6kQ7?usp=sharing.
-* 10 Agriculture Downstream Task Datasets.
+* [x] Agri420K dataset (val).    Download:https://drive.google.com/drive/folders/1-EuB92O74W9MO_590YGsfAwipZbS6kQ7?usp=sharing.
+* [ ] 10 Agriculture Downstream Task Datasets.
+* [ ] pretrained weights in Agri420K
+* [ ] pretrained weights in ten downstream tasks
+* [ ] Agri420K dataset (train)
 
 **Notes**:
 - Due to the investment of funds for the work, we will make the training data publicly available after the article has been accepted.
@@ -13,13 +27,14 @@ This project is a benchmark for computer vision in agriculture.
 A high-quality dataset is the foundation for building any performance-powerful model. We investigated 154 datasets related to agricultural image processing and found that all datasets focus on a single agricultural scenario, 71.4% of the datasets have a size of less than 10 thousand, and only 3 datasets have a size of more than 100 thousand. Models trained on these datasets do not generalize well to open agricultural scenarios. To address the above issues, we construct a large-scale benchmark dataset—Agri420K, specifically targeted at the agricultural image processing domain. Agri420K contains 430 thousand high-quality images across 123 agricultural categories, covering 10 agricultural scenarios: fruits, diseases and pests, animals, weeds, crops, vegetables, insects, crop seeds, agricultural machinery, and agricultural remote sensing. We identify the 10 most frequently applied models in the agricultural image processing domain and conduct controlled experiments on the Agri420K and 10 downstream agricultural datasets with training-from-scratch and transfer learning, respectively. The experimental results demonstrate that Agri420K significantly improves model performance in agricultural image recognition tasks compared to ImageNet1K, with an average increase of 49.10% in convergence speed. To the best of our knowledge, Agri420K is the largest open-source image dataset in the agricultural domain, encompassing the widest range of scenarios, holding significant practical value for promoting the advancements in computer vision technologies within the agricultural domain.
 
 ## 🏠 Overview
-![4](https://github.com/user-attachments/assets/e4f366c9-dff2-4d7e-8e1b-ad39e4f9cb42)
-![1](https://github.com/user-attachments/assets/f3bf3c4b-96e7-4902-8f8f-8594abeec8c1)
-![3](https://github.com/user-attachments/assets/c60916a9-3189-407d-b90a-1d7c6a157648)
+![1](figures/4.png)
+![2](figures/123.png)
+![3](figures/1.png)
+![4](figures/3.png)
 
 
 ## 🎁 Train and Test
-We have provided detailed instructions for model training and testing and experimental details. 
+We have provided detailed instructions for model training and testing, and experimental details. 
 
 ### Install
 - Clone this repo:
@@ -28,7 +43,7 @@ We have provided detailed instructions for model training and testing and experi
 conda create -n dt python=3.10 -y
 conda activate dt
 git clone git@github.com:CAU-COE-VEICLab/Agriculture-Benchmark.git
-cd Vision-Cognitive-Neural-Networks
+cd Agriculture-Benchmark
 ```
 - Install `CUDA>=10.2` with `cudnn>=7` following
   the [official installation instructions](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html)
@@ -69,6 +84,36 @@ load data:
       └── ...
  
   ```
+
+## 🏠 Support models
+* [x] swin transformer v1&v2
+* [x] vision transformer
+* [x] pvt 
+* [x] convnext
+* [x] resnet
+* [x] vgg
+* [x] mobilenet v2&v3
+* [x] efficientnet
+* [x] xception
+* [x] densenet
+
+### Evaluation
+
+To evaluate a pre-trained `MobileNet` on Agri420K val, run:
+
+```bash
+python -m torch.distributed.launch --nproc_per_node <num-of-gpus-to-use>  main_agri420k.py --eval \
+--cfg <config-file, e.g.,  configs/agri420k_benchmark/mobilenet/pretrain/mobilenetv2.yaml > --pretrained <checkpoint> --data-path <imagenet-path> 
+```
+
+## Training from scratch 
+
+To train the `SwinTransformer-B` on ImageNet1k, run:
+
+```bash
+python -m torch.distributed.launch --nproc_per_node <num-of-gpus-to-use>  main.py \
+--cfg <config-file, e.g.,  configs/agri420k_benchmark/swin/pretrain/swin_base_patch4_window7_224.yaml > --data-path <imagenet-path> [--batch-size <batch-size-per-gpu> --output <output-directory> --tag <job-tag>]
+```
 
 ## Model Hub
 TODOs
