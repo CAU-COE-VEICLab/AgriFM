@@ -5,6 +5,10 @@
 <div>
     <a>Guorun Li</a>;
     <a>Yucong Wang</a>;
+    <a>Liu Lei</a>;
+    <a>Xiaoyu Li</a>;
+    <a>Shuohua Zhang</a>;
+    <a>Wang Liu</a>;
     <a>Yuefeng Du*</a>;
 </div>
 
@@ -20,7 +24,9 @@
 * [ ] Agri420K dataset (train)
 
 **Notes**:
+- The details of Agri420K please see our paper and [excel](agri420k.xlsx).
 - Due to the investment of funds for the work, we will make the training data publicly available after the article has been accepted.
+
 
 
 ## 🏠 Abstract
@@ -108,7 +114,7 @@ python -m torch.distributed.launch --nproc_per_node <num-of-gpus-to-use>  main_a
 
 ## Training from scratch 
 
-To train the `SwinTransformer-B` on ImageNet1k, run:
+To train the `SwinTransformer-B` on Agri420K, run:
 
 ```bash
 python -m torch.distributed.launch --nproc_per_node <num-of-gpus-to-use>  main.py \
