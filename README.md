@@ -2,8 +2,11 @@
 This project is a benchmark for computer vision in agriculture.
 
 ## 🏠 TODOs
-* Agri420K dataset (val).
+* Agri420K dataset (val).Download:https://drive.google.com/drive/folders/1-EuB92O74W9MO_590YGsfAwipZbS6kQ7?usp=sharing.
 * 10 Agriculture Downstream Task Datasets.
+
+**Notes**:
+- Due to the investment of funds for the work, we will make the training data publicly available after the article has been accepted.
 
 
 ## 🏠 Abstract
@@ -68,25 +71,20 @@ load data:
   ```
 
 ## Model Hub
-
 TODOs
 | Rank | Models           | Flops/G | Params/M | Top-1 ACC/% ImageNet1K | ImageNet1K Model | Top-1 ACC/% Agri420K | Agri420K Model |
-| :--: | :--------------- | :-----: | :------: | :--------------------: | :--------------: | :------------------: | :------------: |
-| 1    | ResNet           |   7.9   |   44.5   |          81.7          |       [link]()   |         86.8         |     [link]()   |
-| 2    | VGG              |  19.6   |  143.7   |          71.5          |       [link]()   |         81.5         |     [link]()   |
-| 3    | MobileNet        |   0.3   |   3.5    |          72.0          |       [link]()   |         79.6         |     [link]()   |
-| 4    | Xception         |   4.6   |  22.9    |          79.0          |       [link]()   |         91.0         |     [link]()   |
-| 5    | EfficientNet     |  18.1   |  206.8   |          84.4          |       [link]()   |         90.4         |     [link]()   |
-| 6    | DenseNet         |   4.4   |  20.0    |          77.5          |       [link]()   |         91.6         |     [link]()   |
-| 7    | Vision Transformer | 12.7  |  88.2    |          77.9          |       [link]()   |         64.8         |     [link]()   |
-| 8    | Swin Transformer |  15.2   |  87.7    |          83.5          |       [link]()   |         91.9         |     [link]()   |
-| 9    | Swin Transformer V2 | 15.0 |  67.0    |          83.9          |       [link]()   |         92.2         |     [link]()   |
-| 10   | PVT              |  11.4   |  82.0    |          83.8          |       [link]()   |         92.2         |     [link]()   |
+|:----:|:----------------:|:-------:|:--------:|:----------------------:|:----------------:|:--------------------:|:--------------:|
+|  1   | ResNet           |   7.9   |   44.5   |          81.7          |      [link]()    |          86.8        |     [link]()   |
+|  2   | VGG              |  19.6   |  143.7   |          71.5          |      [link]()    |          81.5        |     [link]()   |
+|  3   | MobileNet        |   0.3   |    3.5   |          72.0          |      [link]()    |          79.6        |     [link]()   |
+|  4   | Xception         |   4.6   |   22.9   |          79.0          |      [link]()    |          91.0        |     [link]()   |
+|  5   | EfficientNet     |  18.1   |  206.8   |          84.4          |      [link]()    |          90.4        |     [link]()   |
+|  6   | DenseNet         |   4.4   |   20.0   |          77.5          |      [link]()    |          91.6        |     [link]()   |
+|  7   | Vision Transformer|  12.7  |   88.2   |          77.9          |      [link]()    |          64.8        |     [link]()   |
+|  8   | Swin Transformer |  15.2   |   87.7   |          83.5          |      [link]()    |          91.9        |     [link]()   |
+|  9   | Swin Transformer V2| 15.0  |   67.0   |          83.9          |      [link]()    |          92.2        |     [link]()   |
+| 10   | PVT              |  11.4   |   82.0   |          83.8          |      [link]()    |          92.2        |     [link]()   |
 
-
-**Notes**:
-
-- Due to the investment of funds for the work, we will make the training data publicly available after the article has been accepted.
 
 
 ## Acknowledge
