@@ -13,7 +13,7 @@
 </div>
 
 ## 🏠 TODOs
-* [x] Agri420K dataset (val).    Download:https://drive.google.com/drive/folders/1-EuB92O74W9MO_590YGsfAwipZbS6kQ7?usp=sharing.
+* [x] Agri420K dataset (val).    [Download Link:](https://drive.google.com/drive/folders/1-EuB92O74W9MO_590YGsfAwipZbS6kQ7?usp=sharing).
 * [ ] 10 Agriculture Downstream Task Datasets.
 * [ ] pretrained weights in Agri420K
 * [ ] pretrained weights in ten downstream tasks
