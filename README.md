@@ -12,7 +12,7 @@
     <a>Yuefeng Du*</a>;
 </div>
 
-<h3><strong>submitted to International Journal of Computer Vision in 2025</strong></h3>
+<h3><strong>submitted to Artificial Intelligence in Agriculture in 2025</strong></h3>
 
 </div>
 
