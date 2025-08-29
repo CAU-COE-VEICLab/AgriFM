@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>Agri420K: A Large-Scale Benchmark Dataset for Agricultural Image Recognition</h1> 
+<h1>AgriFM: Towards a Domain-Specific Foundation Model for Agricultural Image Visual Recognition</h1> 
 
 <div>
     <a>Guorun Li</a>;
