@@ -18,10 +18,10 @@
 
 ## 🏠 TODOs
 * [x] Agri420K dataset (val).    [Download Link](https://drive.google.com/drive/folders/1-EuB92O74W9MO_590YGsfAwipZbS6kQ7?usp=sharing).
+* [x] AgriFM model.
 * [ ] 10 Agriculture Downstream Task Datasets. 
 * [ ] pretrained weights in Agri420K
 * [ ] pretrained weights in ten downstream tasks
-* [ ] Agri420K dataset (train)
 
 **Notes**:
 - The details of Agri420K please see our paper and [excel](agri420k.xlsx).
@@ -31,7 +31,7 @@
 
 
 ## 🏠 Abstract
-A high-quality dataset is the foundation for building any performance-powerful model. We investigated 154 datasets related to agricultural image processing and found that all datasets focus on a single agricultural scenario, 71.4% of the datasets have a size of less than 10 thousand, and only 3 datasets have a size of more than 100 thousand. Models trained on these datasets do not generalize well to open agricultural scenarios. To address the above issues, we construct a large-scale benchmark dataset—Agri420K, specifically targeted at the agricultural image processing domain. Agri420K contains 430 thousand high-quality images across 123 agricultural categories, covering 10 agricultural scenarios: fruits, diseases and pests, animals, weeds, crops, vegetables, insects, crop seeds, agricultural machinery, and agricultural remote sensing. We identify the 10 most frequently applied models in the agricultural image processing domain and conduct controlled experiments on the Agri420K and 10 downstream agricultural datasets with training-from-scratch and transfer learning, respectively. The experimental results demonstrate that Agri420K significantly improves model performance in agricultural image recognition tasks compared to ImageNet1K, with an average increase of 49.10% in convergence speed. To the best of our knowledge, Agri420K is the largest open-source image dataset in the agricultural domain, encompassing the widest range of scenarios, holding significant practical value for promoting the advancements in computer vision technologies within the agricultural domain.
+Developing a domain-specific vision foundation model (VFM) for the agricultural sector is crucial for improving the robustness and generalization of visual recognition systems in dynamic farmland environments. However, this goal requires both large-scale, high-quality domain data and a tailored model architecture. In this study, we address both challenges and propose AgriFM, a VFM specifically designed for agricultural image recognition (AIR). To overcome the lack of large-scale annotated agricultural data, we construct a benchmark dataset—Agri420K, which contains 430,000 high-quality images spanning 123 agricultural categories across 10 scenarios. On the model side, we introduce a novel attention mechanism—Dynamic Attention (DA), that integrates multi-scale feature aggregation and cross-window global semantic interaction. Based on DA, we further develop a Dynamic Transformer and a progressive hybrid architecture, enabling a smooth transition from semantic-level to element-level global representation modeling. More than 200 comparative experiments demonstrate that AgriFM consistently outperforms ten baseline models on Agri420K and ten downstream AIR datasets, exhibiting strong domain generalization capability. Moreover, the results show that baseline models pre-trained on Agri420K outperform their ImageNet pre-trained counterparts across all downstream tasks, underscoring the value of domain-specific data for improving models’ performance in agricultural applications. Beyond filling the long-standing gap of VFM research in the AIR field, this work has the potential to shift the focus of AIR research from developing task-specific models toward building domain-specific foundation models.
 
 ## 🏠 Overview
 ![1](figures/4.png)
