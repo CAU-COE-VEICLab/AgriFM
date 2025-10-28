@@ -12,7 +12,7 @@
     <a>Yuefeng Du*</a>;
 </div>
 
-<h3><strong>submitted to Artificial Intelligence in Agriculture in 2025</strong></h3>
+<h3><strong>submitted to Computers and Electronics in Agriculture in 2025</strong></h3>
 
 </div>
 
@@ -49,7 +49,7 @@ We have provided detailed instructions for model training and testing, and exper
 ```bash
 conda create -n dt python=3.10 -y
 conda activate dt
-git clone git@github.com:CAU-COE-VEICLab/Agriculture-Benchmark.git
+git clone git@github.com:CAU-COE-VEICLab/AgriFM.git
 cd Agriculture-Benchmark
 ```
 - Install `CUDA>=10.2` with `cudnn>=7` following
