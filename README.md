@@ -34,9 +34,9 @@
 Developing a domain-specific vision foundation model (VFM) for the agricultural sector is crucial for improving the robustness and generalization of visual recognition systems in dynamic farmland environments. However, this goal requires both large-scale, high-quality domain data and a tailored model architecture. Therefore, to address the scarcity of large-scale annotated agricultural data, this work develops a benchmark dataset—Agri430K to train agricultural-specific VFMs. It contains 430,107 high-quality images covering 123 agricultural categories across 10 scenarios. Additionally, this work proposes an agricultural foundation model (AgriFM) for agricultural image recognition (AIR). It incorporates a Dynamic Attention (DA) mechanism that integrates multi-scale feature aggregation and cross-window global semantic interaction. Based on DA, this work further develops a Dynamic Transformer and a progressive hybrid architecture, enabling a smooth transition from semantic-level to element-level global representation modeling. Finally, to validate the performance and generalization of AgriFM and the importance of Agri430K, this work conducts over 200 comparative experiments. The results demonstrate that AgriFM achieves the state-of-the-art (SOTA) Top-1 accuracy of 97.4% on Agri430K and the SOTA Top-1 average accuracy of 97.6% across ten downstream AIR datasets, exhibiting strong domain generalization capability. Moreover, ten baseline models pre-trained on Agri430K outperform their ImageNet pre-trained counterparts across all downstream tasks, underscoring the value of domain-specific data for improving model performance in agricultural applications. Beyond filling the long-standing gap of VFM research in the AIR field, this work has the potential to shift the focus of AIR research from developing task-specific models toward building domain-specific foundation models. 
 
 ## 🏠 Overview
+![3](figures/1.png)
 ![1](figures/4.png)
 ![2](figures/123.png)
-![3](figures/1.png)
 ![4](figures/3.png)
 
 
