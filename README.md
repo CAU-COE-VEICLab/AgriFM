@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>AgriFM: A Vision Foundation Model for Agricultural Image Recognition</h1> 
+<h1>An Advanced Vision Foundation Model and Comprehensive Benchmark Dataset for Agricultural Image Recognition</h1> 
 
 <div>
     <a>Guorun Li</a>;
@@ -17,21 +17,21 @@
 </div>
 
 ## 🏠 TODOs
-* [x] Agri420K dataset (val).    [Download Link](https://drive.google.com/drive/folders/1-EuB92O74W9MO_590YGsfAwipZbS6kQ7?usp=sharing).
+* [x] Agri430K dataset (val).    [Download Link](https://drive.google.com/drive/folders/1-EuB92O74W9MO_590YGsfAwipZbS6kQ7?usp=sharing).
 * [x] AgriFM model.
 * [ ] 10 Agriculture Downstream Task Datasets. 
 * [ ] pretrained weights in Agri420K
 * [ ] pretrained weights in ten downstream tasks
 
 **Notes**:
-- The details of Agri420K please see our paper and [excel](agri420k.xlsx).
+- The details of Agri430K please see our paper and [excel](agri420k.xlsx).
 - Please see excel(downstream tasks.xlsx) for the details of 10 downstream tasks.
 - Due to the investment of funds for the work, we will make the training data publicly available after the article has been accepted.
 
 
 
 ## 🏠 Abstract
-Developing a domain-specific vision foundation model (VFM) for the agricultural sector is crucial for improving the robustness and generalization of visual recognition systems in dynamic farmland environments. However, this goal requires both large-scale, high-quality domain data and a tailored model architecture. In this study, we address both challenges and propose AgriFM, a VFM specifically designed for agricultural image recognition (AIR). To overcome the lack of large-scale annotated agricultural data and train AgriFM, we construct a benchmark dataset—Agri420K, which contains 420,000 high-quality training images spanning 123 agricultural categories across 10 scenarios. On the model side, we introduce a novel attention mechanism—Dynamic Attention (DA), that integrates multi-scale feature aggregation and cross-window global semantic interaction. Based on DA, we further develop a Dynamic Transformer and a progressive hybrid architecture, enabling a smooth transition from semantic-level to element-level global representation modeling. More than 200 comparative experiments demonstrate that AgriFM consistently outperforms ten baseline models on Agri420K and ten downstream AIR datasets, exhibiting strong domain generalization capability. Moreover, the results show that baseline models pre-trained on Agri420K outperform their ImageNet pre-trained counterparts across all downstream tasks, underscoring the value of domain-specific data for improving models’ performance in agricultural applications. Beyond filling the long-standing gap of VFM research in the AIR field, this work has the potential to shift the focus of AIR research from developing task-specific models toward building domain-specific foundation models.
+Developing a domain-specific vision foundation model (VFM) for the agricultural sector is crucial for improving the robustness and generalization of visual recognition systems in dynamic farmland environments. However, this goal requires both large-scale, high-quality domain data and a tailored model architecture. Therefore, to address the scarcity of large-scale annotated agricultural data, this work develops a benchmark dataset—Agri430K to train agricultural-specific VFMs. It contains 430,107 high-quality images covering 123 agricultural categories across 10 scenarios. Additionally, this work proposes an agricultural foundation model (AgriFM) for agricultural image recognition (AIR). It incorporates a Dynamic Attention (DA) mechanism that integrates multi-scale feature aggregation and cross-window global semantic interaction. Based on DA, this work further develops a Dynamic Transformer and a progressive hybrid architecture, enabling a smooth transition from semantic-level to element-level global representation modeling. Finally, to validate the performance and generalization of AgriFM and the importance of Agri430K, this work conducts over 200 comparative experiments. The results demonstrate that AgriFM achieves the state-of-the-art (SOTA) Top-1 accuracy of 97.4% on Agri430K and the SOTA Top-1 average accuracy of 97.6% across ten downstream AIR datasets, exhibiting strong domain generalization capability. Moreover, ten baseline models pre-trained on Agri430K outperform their ImageNet pre-trained counterparts across all downstream tasks, underscoring the value of domain-specific data for improving model performance in agricultural applications. Beyond filling the long-standing gap of VFM research in the AIR field, this work has the potential to shift the focus of AIR research from developing task-specific models toward building domain-specific foundation models. 
 
 ## 🏠 Overview
 ![1](figures/4.png)
@@ -47,10 +47,10 @@ We have provided detailed instructions for model training and testing, and exper
 - Clone this repo:
 
 ```bash
-conda create -n dt python=3.10 -y
-conda activate dt
+conda create -n agrifm python=3.10 -y
+conda activate agrifm
 git clone git@github.com:CAU-COE-VEICLab/AgriFM.git
-cd Agriculture-Benchmark
+cd AgriFM
 ```
 - Install `CUDA>=10.2` with `cudnn>=7` following
   the [official installation instructions](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html)
@@ -70,7 +70,7 @@ load data:
 - For standard folder dataset, move validation images to labeled sub-folders. The file structure should look like:
   ```bash
   $ tree data
-  ImageNet1K and Agri420K
+  ImageNet1K and Agri430K
   ├── train
   │   ├── class1
   │   │   ├── img1.jpeg
@@ -106,25 +106,25 @@ load data:
 
 ### Evaluation
 
-To evaluate a pre-trained `MobileNet` on Agri420K val, run:
+To evaluate a pre-trained `MobileNet` on Agri430K val, run:
 
 ```bash
-python -m torch.distributed.launch --nproc_per_node <num-of-gpus-to-use>  main_agri420k.py --eval \
---cfg <config-file, e.g.,  configs/agri420k_benchmark/mobilenet/pretrain/mobilenetv2.yaml > --pretrained <checkpoint> --data-path <imagenet-path> 
+python -m torch.distributed.launch --nproc_per_node <num-of-gpus-to-use>  main_agri430k.py --eval \
+--cfg <config-file, e.g.,  configs/agri430k_benchmark/mobilenet/pretrain/mobilenetv2.yaml > --pretrained <checkpoint> --data-path <imagenet-path> 
 ```
 
 ## Training from scratch 
 
-To train the `SwinTransformer-B` on Agri420K, run:
+To train the `SwinTransformer-B` on Agri430K, run:
 
 ```bash
 python -m torch.distributed.launch --nproc_per_node <num-of-gpus-to-use>  main.py \
---cfg <config-file, e.g.,  configs/agri420k_benchmark/swin/pretrain/swin_base_patch4_window7_224.yaml > --data-path <imagenet-path> [--batch-size <batch-size-per-gpu> --output <output-directory> --tag <job-tag>]
+--cfg <config-file, e.g.,  configs/agri430k_benchmark/swin/pretrain/swin_base_patch4_window7_224.yaml > --data-path <imagenet-path> [--batch-size <batch-size-per-gpu> --output <output-directory> --tag <job-tag>]
 ```
 
 ## Model Hub
 TODOs
-| Rank | Models           | Flops/G | Params/M | Top-1 ACC/% ImageNet1K | ImageNet1K Model | Top-1 ACC/% Agri420K | Agri420K Model |
+| Rank | Models           | Flops/G | Params/M | Top-1 ACC/% ImageNet1K | ImageNet1K Model | Top-1 ACC/% Agri430K | Agri430K Model |
 |:----:|:----------------:|:-------:|:--------:|:----------------------:|:----------------:|:--------------------:|:--------------:|
 |  1   | ResNet           |   7.9   |   44.5   |          81.7          |      [link]()    |          86.8        |     [link]()   |
 |  2   | VGG              |  19.6   |  143.7   |          71.5          |      [link]()    |          81.5        |     [link]()   |
