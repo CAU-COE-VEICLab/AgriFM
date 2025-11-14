@@ -1,9 +1,0 @@
-DATA:
-  DATASET: agri420k
-  IMG_SIZE: 256
-MODEL:
-  TYPE: mobilevit
-  NAME: mobilevit_xxs
-  MOBILEVIT:
-    TYPE: 'xxs'
-SAVE_FREQ: 50

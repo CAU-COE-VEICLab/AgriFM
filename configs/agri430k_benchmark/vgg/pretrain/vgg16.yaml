@@ -1,0 +1,7 @@
+DATA:
+  DATASET: agri430k
+  IMG_SIZE: 224
+MODEL:
+  TYPE: vgg16
+  NAME: vgg16
+SAVE_FREQ: 50

@@ -1,5 +1,5 @@
 # --------------------------------------------------------
-# Agri420K: A Large-Scale Benchmark Dataset for Agricultural Image Recognition
+# An Advanced Vision Foundation Model and Comprehensive Benchmark Dataset for Agricultural Image Recognition
 # Licensed under The MIT License [see LICENSE for details]
 # Written by Guorun Li and Yucong Wang
 # --------------------------------------------------------
@@ -115,7 +115,7 @@ def build_dataset(is_train, config):
             ann_file = prefix + "_map_val.txt"
         dataset = IN22KDATASET(config.DATA.DATA_PATH, ann_file, transform)
         nb_classes = 21841
-    elif config.DATA.DATASET == 'agri420k':
+    elif config.DATA.DATASET == 'agri430k':
         prefix = 'train' if is_train else 'val'
         root = os.path.join(config.DATA.DATA_PATH, prefix)
         dataset = datasets.ImageFolder(root, transform=transform)

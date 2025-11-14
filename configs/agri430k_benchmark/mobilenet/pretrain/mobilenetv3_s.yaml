@@ -1,0 +1,7 @@
+DATA:
+  DATASET: agri430k
+  IMG_SIZE: 224
+MODEL:
+  TYPE: mobilenetv3_s
+  NAME: mobilenetv3_s
+SAVE_FREQ: 50

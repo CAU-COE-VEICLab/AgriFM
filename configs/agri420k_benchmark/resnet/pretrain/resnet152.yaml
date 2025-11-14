@@ -1,9 +1,0 @@
-DATA:
-  DATASET: agri420k
-  IMG_SIZE: 224
-MODEL:
-  TYPE: resnet
-  NAME: resnet152
-  RESNET:
-    LAYERS: [3, 8, 36, 3]
-SAVE_FREQ: 50

@@ -1,0 +1,9 @@
+DATA:
+  DATASET: agri430k
+  IMG_SIZE: 224
+MODEL:
+  TYPE: densenet201
+  NAME: densenet201_ft
+SAVE_FREQ: 50
+
+

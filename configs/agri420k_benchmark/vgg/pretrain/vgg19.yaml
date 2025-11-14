@@ -1,7 +1,0 @@
-DATA:
-  DATASET: agri420k
-  IMG_SIZE: 224
-MODEL:
-  TYPE: vgg19
-  NAME: vgg19
-SAVE_FREQ: 50

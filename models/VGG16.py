@@ -1,7 +1,7 @@
 # --------------------------------------------------------
-# Agri420K: A Large-Scale Benchmark Dataset for Agricultural Image Recognition
+# An Advanced Vision Foundation Model and Comprehensive Benchmark Dataset for Agricultural Image Recognition
 # Licensed under The MIT License [see LICENSE for details]
-# Written by Yucong Wang and Guorun Li
+# Written by Guorun Li and Yucong Wang
 # --------------------------------------------------------
 
 import torch.nn as nn

@@ -1,7 +1,0 @@
-DATA:
-  DATASET: agri420k
-  IMG_SIZE: 224
-MODEL:
-  TYPE: xception
-  NAME: xception
-SAVE_FREQ: 50
