@@ -18,7 +18,7 @@
 
 ## 🏠 TODOs
 * [x] Agri430K dataset (val).    [Download Link](https://drive.google.com/drive/folders/1-EuB92O74W9MO_590YGsfAwipZbS6kQ7?usp=sharing).
-* [x] AgriFM model.
+* [ ] AgriFM model.
 * [ ] 10 Agriculture Downstream Task Datasets. 
 * [ ] pretrained weights in Agri430K
 * [ ] pretrained weights in ten downstream tasks
